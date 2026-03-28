@@ -1,5 +1,7 @@
 package prac;
 
+import java.util.Scanner;
+
 public class Prac5 {
     public static void main(String[] args) {
         //정수 두 개를 입력 받고, 해당 정수들 사이에 있는 값을 출력하자.
@@ -7,9 +9,29 @@ public class Prac5 {
 
         //코드 작성하기
 
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("첫 번째 숫자 입력: ");
+        int n1 = sc.nextInt();
 
+        System.out.print("두 번째 숫자 입력: ");
+        int n2 = sc.nextInt();
 
+        if (n1 > n2) {
+            int a = n1;
+            n1 = n2;
+            n2 = a;
+        }
+
+        System.out.print("두 숫자 사이에 있는 수: ");
+
+        for (int i = n1; i <= n2; i++) {
+            if (i < n2) {
+                System.out.print(i + ", ");
+            } else {
+                System.out.print(i);
+            }
+        }
         /*
         첫 번째 숫자 입력: 10
         두 번째 숫자 입력: 5
